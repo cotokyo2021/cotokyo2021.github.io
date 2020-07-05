@@ -1,8 +1,11 @@
 const positions = [];
 
+let distance = 0;
+
 const savePosition = (position) => {
-    console.log(position);
-    positions.push(JSON.stringify(position));
+    positions.push(position);
+    document.getElementById('txt').value = JSON.stringify(positions, null, ' ');
+    document.getElementById("p1").innerHTML = positions.length;
 }
 
 const handleError = (error) => {
